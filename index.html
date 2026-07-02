@@ -82,6 +82,13 @@
       gap: 5px;
     }
 
+    .profile-note {
+      margin-top: 16px;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
     main {
       max-width: 680px;
     }
@@ -130,6 +137,10 @@
       font-weight: 600;
     }
 
+    .compact-list li {
+      margin: 4px 0;
+    }
+
     footer {
       margin-top: 36px;
       color: #777;
@@ -163,14 +174,23 @@
       <img class="avatar" src="images/photo.jpg" alt="Xiaotian Zhang" />
       <h1>Xiaotian Zhang</h1>
       <p class="title">Incoming Ph.D. Student<br />Starting in late Aug. 2026</p>
-      <p class="affiliation">State Key Laboratory of Processor Chips<br />Institute of Computing Technology, CAS</p>
-      <p class="affiliation">B.S., ShanghaiTech University</p>
+      <p class="affiliation">Microprocessor Research Center<br />Institute of Computing Technology, CAS</p>
+      <p class="affiliation">
+        <a href="https://sklp.ict.ac.cn/">State Key Lab of Processors, ICT, CAS</a>
+      </p>
+      <p class="affiliation">
+        Advisor:
+        <a href="https://ict.cas.cn/sourcedb/cn/jssrck/200909/t20090917_2496730.html">Prof. Jian Wang</a>
+      </p>
+      <p class="affiliation">B.Eng. in Electronic Information Engineering<br />ShanghaiTech University</p>
 
       <div class="links">
         <span>zhangxt2022 [at] shanghaitech [dot] edu [dot] cn</span>
-        <a href="https://github.com/Xiaotian-wq">GitHub</a>
-        <a href="https://www.shanghaitech.edu.cn/">ShanghaiTech</a>
       </div>
+
+      <p class="profile-note">
+        Research interests: processor architecture, chiplet interconnects, RISC-V systems, and IC design.
+      </p>
     </aside>
 
     <main>
@@ -178,8 +198,10 @@
         <h2>About Me</h2>
         <p>
           I am an incoming Ph.D. student in Computer Science and Technology at the Institute of Computing Technology,
-          Chinese Academy of Sciences, where I will join the State Key Laboratory of Processor Chips in late August 2026.
-          I received my B.S. degree from ShanghaiTech University, with training and project experience in
+          Chinese Academy of Sciences, where I will join the Microprocessor Research Center and the State Key Lab
+          of Processors, ICT, CAS under the supervision of Prof. Jian Wang in late August 2026.
+          I received my B.Eng. degree in Electronic Information Engineering from ShanghaiTech University,
+          with training and project experience in
           digital integrated circuits, computer architecture, advanced analog integrated circuits, programming,
           and communication systems.
         </p>
@@ -192,9 +214,9 @@
 
       <section>
         <h2>Research Interests</h2>
-        <ul>
+        <ul class="compact-list">
           <li><strong>Chiplet Interconnects:</strong> die-to-die interfaces, UCIe-like protocols, high-speed transmitter design, and package-aware links.</li>
-          <li><strong>Computer Architecture:</strong> RISC-V processors, pipeline design, memory hierarchy, cache behavior, and architecture-level optimization.</li>
+          <li><strong>Processor Architecture:</strong> RISC-V processors, pipeline design, memory hierarchy, cache behavior, and architecture-level optimization.</li>
           <li><strong>Integrated Circuits:</strong> digital IC design, analog/mixed-signal circuits, low-power design, and PVT-aware circuit optimization.</li>
         </ul>
       </section>
@@ -202,8 +224,8 @@
       <section>
         <h2>News</h2>
         <ul>
-          <li><strong>[Aug. 2026]</strong> I will join the Institute of Computing Technology, CAS as a Ph.D. student.</li>
-          <li><strong>[Jun. 2026]</strong> I will receive my B.S. degree from ShanghaiTech University.</li>
+          <li><strong>[Aug. 2026]</strong> I will join the Microprocessor Research Center at ICT, CAS as a Ph.D. student advised by Prof. Jian Wang.</li>
+          <li><strong>[Jun. 2026]</strong> I will receive my B.Eng. degree from ShanghaiTech University.</li>
           <li><strong>[Jun. 2025]</strong> I completed a visiting study program at UC Berkeley with a GPA of 4.00/4.00.</li>
           <li><strong>[2025]</strong> I received The Best Circuit Design Award, sponsored by Apple Inc. and UC Berkeley.</li>
         </ul>
@@ -214,7 +236,9 @@
         <ul>
           <li>
             <strong>Institute of Computing Technology, Chinese Academy of Sciences</strong><br />
-            Ph.D. in Computer Science and Technology, 2026.08 - 2031.06
+            Ph.D. in Computer Science and Technology, 2026.08 - 2031.06<br />
+            Microprocessor Research Center; State Key Lab of Processors, ICT, CAS<br />
+            Advisor: Prof. Jian Wang
           </li>
           <li>
             <strong>University of California, Berkeley</strong><br />
@@ -222,7 +246,8 @@
           </li>
           <li>
             <strong>ShanghaiTech University</strong><br />
-            B.S., 2022.09 - 2026.06, GPA: 3.84/4.00, ranking: 13/238
+            B.Eng. in Electronic Information Engineering, 2022.09 - 2026.06<br />
+            GPA: 3.84/4.00, ranking: 13/238
           </li>
         </ul>
       </section>
