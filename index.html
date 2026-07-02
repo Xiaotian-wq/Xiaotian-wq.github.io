@@ -84,7 +84,11 @@
 
     .profile-note {
       margin-top: 16px;
+      padding: 10px 12px;
       color: #666;
+      background: #f7fafc;
+      border-left: 3px solid #6aa4c8;
+      border-radius: 3px;
       font-size: 14px;
       line-height: 1.45;
     }
@@ -137,8 +141,41 @@
       font-weight: 600;
     }
 
-    .compact-list li {
-      margin: 4px 0;
+    .focus-strip {
+      margin: 14px 0 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .focus-strip span {
+      padding: 4px 10px;
+      color: #2f5f7c;
+      background: #eef6fb;
+      border: 1px solid #d6e8f3;
+      border-radius: 999px;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .interest-list {
+      margin-top: 12px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .interest-list li {
+      margin: 10px 0;
+      padding: 9px 12px 9px 14px;
+      background: #fbfcfd;
+      border-left: 3px solid #8bb8d3;
+      border-radius: 3px;
+    }
+
+    .interest-list strong {
+      color: #222;
+      display: block;
+      margin-bottom: 2px;
     }
 
     footer {
@@ -189,7 +226,7 @@
       </div>
 
       <p class="profile-note">
-        Research interests: processor architecture, chiplet interconnects, RISC-V systems, and IC design.
+        Research interests: computer architecture, chiplet interconnects, memory hierarchy, and unified shared memory systems.
       </p>
     </aside>
 
@@ -198,26 +235,29 @@
         <h2>About Me</h2>
         <p>
           I am an incoming Ph.D. student in Computer Science and Technology at the Institute of Computing Technology,
-          Chinese Academy of Sciences, where I will join the Microprocessor Research Center and the State Key Lab
-          of Processors, ICT, CAS under the supervision of Prof. Jian Wang in late August 2026.
-          I received my B.Eng. degree in Electronic Information Engineering from ShanghaiTech University,
-          with training and project experience in
-          digital integrated circuits, computer architecture, advanced analog integrated circuits, programming,
-          and communication systems.
+          Chinese Academy of Sciences, advised by Prof. Jian Wang. I will join the Microprocessor Research Center
+          and the State Key Lab of Processors, ICT, CAS in late August 2026.
         </p>
         <p>
-          My current interests lie at the intersection of computer architecture and integrated circuit design,
-          especially processor chips, die-to-die chiplet interconnects, RISC-V systems, memory hierarchy, and
-          mixed-signal circuit design.
+          My research interests are computer architecture, chiplet interconnects, memory hierarchy, and
+          unified shared memory for heterogeneous systems. I received my B.Eng. degree in Electronic Information
+          Engineering from ShanghaiTech University.
         </p>
+        <div class="focus-strip" aria-label="Research keywords">
+          <span>Computer Architecture</span>
+          <span>Chiplet Interconnects</span>
+          <span>Memory Hierarchy</span>
+          <span>Unified Shared Memory</span>
+        </div>
       </section>
 
       <section>
         <h2>Research Interests</h2>
-        <ul class="compact-list">
-          <li><strong>Chiplet Interconnects:</strong> die-to-die interfaces, UCIe-like protocols, high-speed transmitter design, and package-aware links.</li>
-          <li><strong>Processor Architecture:</strong> RISC-V processors, pipeline design, memory hierarchy, cache behavior, and architecture-level optimization.</li>
-          <li><strong>Integrated Circuits:</strong> digital IC design, analog/mixed-signal circuits, low-power design, and PVT-aware circuit optimization.</li>
+        <ul class="interest-list">
+          <li><strong>Computer Architecture:</strong> processor architecture, RISC-V systems, memory hierarchy, cache behavior, cache coherence, and performance modeling.</li>
+          <li><strong>Chiplet Interconnects:</strong> die-to-die interfaces, NoC/NoP fabrics, UCIe-like links, package-aware bandwidth/latency/power tradeoffs, and heterogeneous chiplet systems.</li>
+          <li><strong>USM-Aware Memory Fabric:</strong> shared and coherent memory for heterogeneous chiplets, CXL-like memory semantics, device-initiated access, region-based coherence, and page/object placement.</li>
+          <li><strong>Architecture-IC Co-Design:</strong> using digital IC and analog/mixed-signal circuit background to reason about timing, power, area, link reliability, and practical implementation constraints.</li>
         </ul>
       </section>
 
@@ -265,49 +305,13 @@
       </section>
 
       <section>
-        <h2>Selected Projects</h2>
-        <h3>24Gb/s Die-to-Die Chiplet Interconnect Transmitter | Loongson Technology</h3>
-        <ul>
-          <li>Designed a high-speed TX using 1/4-rate clocking and an SST-driver architecture for low-power die-to-die communication.</li>
-          <li>Collaborated on an 8-lane D2D link following UCIe 3.0-style requirements, including PLL, RX, digital control, and cross-die CPU communication.</li>
-          <li>Targeted a standard package with bump pitch Px = 130um and Py = 210um; tape-out is planned in TSMC 12nm technology.</li>
-        </ul>
-
-        <h3>Five-Stage Pipelined RV32I CPU</h3>
-        <ul>
-          <li>Implemented a classic IF/ID/EX/MEM/WB five-stage pipeline based on a Harvard architecture.</li>
-          <li>Supported R/I/S/B/U/J instruction formats and 40+ RV32I integer instructions.</li>
-          <li>Implemented forwarding, pipeline stall, and branch flush mechanisms; passed official RISC-V riscv-tests with CPI no greater than 1.4.</li>
-        </ul>
-
-        <h3>PGA and Low-Pass Filter Design | UC Berkeley</h3>
-        <p class="muted">Advisor: Osama Shana'a, MediaTek</p>
-        <ul>
-          <li>Designed a differential-input differential-output programmable gain amplifier and Butterworth low-pass filter in a 45nm educational process.</li>
-          <li>Optimized power, gain range, bandwidth variation, output noise, P1dB, IM3, leakage, and input offset across PVT conditions.</li>
-          <li>Received The Best Circuit Design Award as the first undergraduate recipient of this doctoral-level circuit competition in recent years.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Selected Coursework</h2>
-        <ul>
-          <li>Computer Architecture</li>
-          <li>Digital Integrated Circuits</li>
-          <li>Advanced Analog Integrated Circuits</li>
-          <li>Computer Programming</li>
-          <li>Principles of Communication</li>
-        </ul>
-      </section>
-
-      <section>
         <h2>Publications</h2>
         <ol>
           <li>
             <span class="paper-title">Current Differential Protection for MMC-HVDC Grids Using a PDE-Based Compact Frequency-Dependent Line Model.</span>
-            Second author, submitted to <em>IEEE Transactions on Industrial Electronics</em>.
+            Second author, currently under review at <em>IEEE Transactions on Industrial Electronics</em>.
             <br />
-            <span class="muted">This work studies frequency-dependent transmission-line modeling for mathematical protection methods in power systems.</span>
+            <span class="muted">This manuscript studies frequency-dependent transmission-line modeling for mathematical protection methods in power systems.</span>
           </li>
         </ol>
       </section>
