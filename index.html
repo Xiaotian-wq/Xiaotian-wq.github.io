@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Xiaotian Zhang - incoming Ph.D. student at ICT, CAS, working on link-aware memory fabrics, chiplet interconnects, and computer architecture."
+    content="Xiaotian Zhang - education, news, and selected awards."
   />
-  <title>Xiaotian Zhang</title>
+  <title>Xiaotian Zhang - Experience</title>
   <style>
     * {
       box-sizing: border-box;
@@ -17,7 +17,8 @@
       margin: 0;
       padding: 44px 22px;
       color: #444;
-      background: #fff;
+      background:
+        linear-gradient(180deg, #e7eef1 0, #f6f8f9 320px, #eef2f3 100%);
       font-family: Georgia, "Times New Roman", "Microsoft YaHei", serif;
       font-size: 16px;
       line-height: 1.62;
@@ -26,6 +27,7 @@
     a {
       color: #267cb9;
       text-decoration: none;
+      transition: color 0.16s ease, border-color 0.16s ease;
     }
 
     a:hover {
@@ -34,17 +36,39 @@
     }
 
     .wrapper {
-      max-width: 980px;
+      max-width: 1040px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 280px minmax(0, 1fr);
-      gap: 42px;
-      align-items: start;
+      grid-template-columns: 300px minmax(0, 1fr);
+      align-items: stretch;
+      background: #fff;
+      border: 1px solid #e3e7ea;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(31, 47, 61, 0.12);
+      overflow: hidden;
     }
 
     aside {
       position: sticky;
       top: 32px;
+      align-self: start;
+    }
+
+    .profile {
+      min-height: calc(100vh - 88px);
+      padding: 34px 28px 36px;
+      background: #f7fafb;
+      border-right: 1px solid #e0e8ed;
+    }
+
+    .profile::before {
+      content: "";
+      display: block;
+      width: 46px;
+      height: 4px;
+      margin-bottom: 22px;
+      background: #547f93;
+      border-radius: 999px;
     }
 
     .avatar {
@@ -55,6 +79,8 @@
       display: block;
       margin-bottom: 20px;
       background: #f0f2f5;
+      border: 1px solid #e2e6ea;
+      box-shadow: 0 8px 18px rgba(31, 47, 61, 0.09);
     }
 
     h1 {
@@ -74,6 +100,18 @@
       font-size: 17px;
     }
 
+    .profile-badge {
+      display: inline-block;
+      margin: 2px 0 12px;
+      padding: 3px 9px;
+      color: #315f74;
+      background: #e9f2f6;
+      border: 1px solid #d2e3eb;
+      border-radius: 999px;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
     .affiliation {
       margin-top: 8px;
       color: #555;
@@ -87,36 +125,73 @@
     }
 
     main {
-      max-width: 680px;
+      max-width: 720px;
+      padding: 34px 40px 36px;
+    }
+
+    .page-nav {
+      margin: 0 0 26px;
+      padding-bottom: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      border-bottom: 1px solid #e5eaee;
+      font-size: 14px;
+    }
+
+    .page-nav a {
+      color: #516572;
+      border-bottom: 1px solid transparent;
+    }
+
+    .page-nav a:hover {
+      color: #245c78;
+      border-bottom-color: #8fb1c1;
+      text-decoration: none;
+    }
+
+    .page-nav a.active {
+      color: #203f50;
+      border-bottom-color: #7fa7b8;
+      font-weight: 600;
+    }
+
+    .nav-divider {
+      width: 1px;
+      height: 18px;
+      background: #d9e2e7;
     }
 
     section {
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
 
     h2 {
-      margin: 0 0 10px;
-      padding-bottom: 4px;
+      position: relative;
+      margin: 0 0 12px;
+      padding-left: 15px;
       color: #222;
-      border-bottom: 1px solid #e5e5e5;
       font-size: 23px;
       font-weight: 600;
       line-height: 1.3;
     }
 
-    h3 {
-      margin: 18px 0 4px;
-      color: #333;
-      font-size: 17px;
-      line-height: 1.35;
+    h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      bottom: 5px;
+      width: 4px;
+      background: #7fa7b8;
+      border-radius: 999px;
     }
 
     p {
       margin: 8px 0;
     }
 
-    ul,
-    ol {
+    ul {
       margin: 8px 0 0;
       padding-left: 22px;
     }
@@ -125,55 +200,11 @@
       margin: 6px 0;
     }
 
-    .muted {
-      color: #666;
-    }
-
-    .paper-title {
-      color: #222;
-      font-weight: 600;
-    }
-
-    .focus-strip {
-      margin: 14px 0 4px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .focus-strip span {
-      padding: 4px 10px;
-      color: #2f5f7c;
-      background: #eef6fb;
-      border: 1px solid #d6e8f3;
-      border-radius: 999px;
-      font-size: 14px;
-      line-height: 1.35;
-    }
-
-    .interest-list {
-      margin-top: 12px;
-      padding-left: 0;
-      list-style: none;
-    }
-
-    .interest-list li {
-      margin: 10px 0;
-      padding: 9px 12px 9px 14px;
-      background: #fbfcfd;
-      border-left: 3px solid #8bb8d3;
-      border-radius: 3px;
-    }
-
-    .interest-list strong {
-      color: #222;
-      display: block;
-      margin-bottom: 2px;
-    }
-
     footer {
       margin-top: 36px;
+      padding-top: 14px;
       color: #777;
+      border-top: 1px solid #e8ecef;
       font-size: 13px;
     }
 
@@ -188,12 +219,31 @@
 
       aside {
         position: static;
-        margin-bottom: 30px;
+        margin-bottom: 0;
+      }
+
+      .profile {
+        min-height: 0;
+        padding: 24px 22px 26px;
+        border-right: 0;
+        border-bottom: 1px solid #e0e8ed;
+      }
+
+      main {
+        padding: 26px 22px 28px;
       }
 
       .avatar {
         width: 140px;
         height: 140px;
+      }
+
+      .page-nav {
+        gap: 8px 14px;
+      }
+
+      .nav-divider {
+        display: none;
       }
     }
   </style>
@@ -203,6 +253,7 @@
     <aside class="profile">
       <img class="avatar" src="images/photo.jpg" alt="Xiaotian Zhang" />
       <h1>Xiaotian Zhang</h1>
+      <p class="profile-badge">Computer Architecture</p>
       <p class="title">Incoming Ph.D. Student<br />ICT, Chinese Academy of Sciences</p>
       <p class="affiliation">Microprocessor Research Center</p>
       <p class="affiliation">
@@ -220,37 +271,17 @@
     </aside>
 
     <main>
-      <section>
-        <h2>About Me</h2>
-        <p>
-          I am an incoming Ph.D. student at the Institute of Computing Technology, Chinese Academy of Sciences,
-          advised by Prof. Jian Wang. My interests lie in computer architecture, chiplet interconnects,
-          and memory systems for heterogeneous computing.
-        </p>
-        <div class="focus-strip" aria-label="Research keywords">
-          <span>Computer Architecture</span>
-          <span>Chiplet Interconnects</span>
-          <span>CXL / UCIe</span>
-          <span>Memory Hierarchy</span>
-          <span>Unified Shared Memory</span>
-        </div>
-      </section>
+      <nav class="page-nav" aria-label="Section navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#publications">Publications</a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a class="active" href="experience.html#news">News</a>
+        <a class="active" href="experience.html#education">Education</a>
+        <a class="active" href="experience.html#awards">Awards</a>
+      </nav>
 
-      <section>
-        <h2>Research</h2>
-        <p>
-          My current focus is link-aware memory fabrics for heterogeneous chiplet systems. I am interested
-          in how realistic D2D, CXL, and UCIe-like link behavior affects shared memory, coherent access,
-          and unified shared memory design.
-        </p>
-        <ul class="interest-list">
-          <li><strong>Chiplet interconnects:</strong> NoC/NoP fabrics, D2D links, and CXL/UCIe-like systems.</li>
-          <li><strong>Memory systems:</strong> cache coherence, shared memory, USM, and device-initiated access.</li>
-          <li><strong>Modeling:</strong> lightweight simulation and performance analysis for architecture policies.</li>
-        </ul>
-      </section>
-
-      <section>
+      <section id="news">
         <h2>News</h2>
         <ul>
           <li><strong>[Aug. 2026]</strong> I will join the Microprocessor Research Center at ICT, CAS as a Ph.D. student advised by Prof. Jian Wang.</li>
@@ -258,7 +289,7 @@
         </ul>
       </section>
 
-      <section>
+      <section id="education">
         <h2>Education</h2>
         <ul>
           <li>
@@ -268,16 +299,16 @@
           </li>
           <li>
             <strong>University of California, Berkeley</strong><br />
-            Visiting Student in EECS, 2025.01 - 2025.06
+            Visiting Student in EECS, 2025.01 - 2025.06, GPA: 4.00/4.00
           </li>
           <li>
             <strong>ShanghaiTech University</strong><br />
-            B.Eng. in Electronic Information Engineering, 2022.09 - 2026.06
+            B.Eng. in Electronic Information Engineering, 2022.09 - 2026.06, GPA: 3.84/4.00
           </li>
         </ul>
       </section>
 
-      <section>
+      <section id="awards">
         <h2>Selected Awards</h2>
         <ul>
           <li>2025: The Best Circuit Design Award, sponsored by Apple Inc. and UC Berkeley</li>
@@ -285,18 +316,6 @@
           <li>2024: Second Prize, National Undergraduate Electronic Design Contest</li>
           <li>2023-2025: Outstanding Student Awards, ShanghaiTech University</li>
         </ul>
-      </section>
-
-      <section>
-        <h2>Publications</h2>
-        <ol>
-          <li>
-            <span class="paper-title">Current Differential Protection for MMC-HVDC Grids Using a PDE-Based Compact Frequency-Dependent Line Model.</span>
-            Second author, currently under review at <em>IEEE Transactions on Industrial Electronics</em>.
-            <br />
-            <span class="muted">This manuscript studies frequency-dependent transmission-line modeling for mathematical protection methods in power systems.</span>
-          </li>
-        </ol>
       </section>
 
       <footer>
