@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Xiaotian Zhang - education, news, and selected awards."
+    content="Xiaotian Zhang - incoming Ph.D. student at ICT, CAS, working on link-aware memory fabrics, chiplet interconnects, and computer architecture."
   />
-  <title>Xiaotian Zhang - Experience</title>
+  <title>Xiaotian Zhang</title>
   <style>
     * {
       box-sizing: border-box;
@@ -150,9 +150,8 @@
       text-decoration: none;
     }
 
-    .page-nav a.active {
+    .nav-label {
       color: #203f50;
-      border-bottom-color: #7fa7b8;
       font-weight: 600;
     }
 
@@ -187,17 +186,72 @@
       border-radius: 999px;
     }
 
+    h3 {
+      margin: 18px 0 4px;
+      color: #333;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
     p {
       margin: 8px 0;
     }
 
-    ul {
+    ul,
+    ol {
       margin: 8px 0 0;
       padding-left: 22px;
     }
 
     li {
       margin: 6px 0;
+    }
+
+    .muted {
+      color: #666;
+    }
+
+    .paper-title {
+      color: #222;
+      font-weight: 600;
+    }
+
+    .focus-strip {
+      margin: 16px 0 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .focus-strip span {
+      padding: 4px 10px;
+      color: #2b5d75;
+      background: #f2f8fb;
+      border: 1px solid #d4e5ee;
+      border-radius: 999px;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .interest-list {
+      margin-top: 12px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .interest-list li {
+      margin: 10px 0;
+      padding: 10px 13px 10px 15px;
+      background: #f8fbfc;
+      border: 1px solid #e4edf2;
+      border-left: 4px solid #8bb8d3;
+      border-radius: 5px;
+    }
+
+    .interest-list strong {
+      color: #222;
+      display: block;
+      margin-bottom: 2px;
     }
 
     footer {
@@ -272,14 +326,58 @@
 
     <main>
       <nav class="page-nav" aria-label="Section navigation">
-        <a href="index.html#about">About</a>
-        <a href="index.html#research">Research</a>
-        <a href="index.html#publications">Publications</a>
+        <span class="nav-label">Research Profile</span>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
         <span class="nav-divider" aria-hidden="true"></span>
-        <a class="active" href="experience.html#news">News</a>
-        <a class="active" href="experience.html#education">Education</a>
-        <a class="active" href="experience.html#awards">Awards</a>
+        <span class="nav-label">Experience</span>
+        <a href="#news">News</a>
+        <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
       </nav>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am an incoming Ph.D. student at the Institute of Computing Technology, Chinese Academy of Sciences,
+          advised by Prof. Jian Wang. My interests lie in computer architecture, chiplet interconnects,
+          and memory systems for heterogeneous computing.
+        </p>
+        <div class="focus-strip" aria-label="Research keywords">
+          <span>Computer Architecture</span>
+          <span>Chiplet Interconnects</span>
+          <span>CXL / UCIe</span>
+          <span>Memory Hierarchy</span>
+          <span>Unified Shared Memory</span>
+        </div>
+      </section>
+
+      <section id="research">
+        <h2>Research</h2>
+        <p>
+          My current focus is link-aware memory fabrics for heterogeneous chiplet systems. I am interested
+          in how realistic D2D, CXL, and UCIe-like link behavior affects shared memory, coherent access,
+          and unified shared memory design.
+        </p>
+        <ul class="interest-list">
+          <li><strong>Chiplet interconnects:</strong> NoC/NoP fabrics, D2D links, and CXL/UCIe-like systems.</li>
+          <li><strong>Memory systems:</strong> cache coherence, shared memory, USM, and device-initiated access.</li>
+          <li><strong>Modeling:</strong> lightweight simulation and performance analysis for architecture policies.</li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <ol>
+          <li>
+            <span class="paper-title">Current Differential Protection for MMC-HVDC Grids Using a PDE-Based Compact Frequency-Dependent Line Model.</span>
+            Second author, currently under review at <em>IEEE Transactions on Industrial Electronics</em>.
+            <br />
+            <span class="muted">This manuscript studies frequency-dependent transmission-line modeling for mathematical protection methods in power systems.</span>
+          </li>
+        </ol>
+      </section>
 
       <section id="news">
         <h2>News</h2>
