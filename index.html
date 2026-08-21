@@ -7,7 +7,7 @@
   <link rel="icon" href="images/ict.jpg" type="image/jpeg" />
   <link rel="apple-touch-icon" href="images/ict.jpg" />
   <meta property="og:title" content="Xiaotian Zhang | ICT, CAS" />
-  <meta property="og:description" content="Ph.D. student at the Institute of Computing Technology, Chinese Academy of Sciences." />
+  <meta property="og:description" content="Ph.D. student at ICT, CAS, interested in data-movement bottlenecks, performance modeling, and memory-interconnect architecture for processor and heterogeneous SoC systems." />
   <meta property="og:image" content="https://xiaotian-wq.github.io/images/ict.jpg" />
   <meta property="og:type" content="website" />
   <style>
@@ -199,23 +199,44 @@
         </p>
         <p>
           I received my B.Eng. degree in Electronic Information Engineering from ShanghaiTech University.
-          I am currently interested in networks-on-chip, chiplet interconnects, and high-speed wired circuits
-          for scalable processor and AI computing systems.
+          My current research interest is in data-movement bottleneck analysis for processor and heterogeneous
+          SoC systems, with a focus on workload/trace-driven performance modeling, memory hierarchy,
+          on-chip fabrics, and die-to-die interconnects.
+        </p>
+        <p>
+          I am particularly interested in how realistic interconnect and memory-system mechanisms, such as
+          packetization, flow control, queues, retry/replay, FIFO/CDC effects, and link latency/bandwidth
+          constraints, shape workload-visible throughput, tail latency, and resource utilization. My background
+          in high-speed wired circuits helps me reason about physical-link constraints as part of architecture
+          exploration rather than as an isolated circuit problem.
         </p>
       </section>
 
       <section>
-        <h3>Work Scope (Research Interests)</h3>
+        <h3>Research Interests</h3>
         <ul class="interest-list">
-          <li><strong>On-Chip and Chiplet Interconnects:</strong> NoC/NoP fabrics, die-to-die communication, and architecture/circuit co-design for processor and AI computing systems.</li>
-          <li><strong>High-Speed Wired Circuits:</strong> low-power transmitter/receiver circuits, package-aware links, and practical implementation constraints for high-bandwidth interfaces.</li>
+          <li><strong>Data-Movement Bottleneck Analysis:</strong> workload traces, memory-access behavior, read/write traffic, burstiness, request dependency, and bottleneck attribution in processor and heterogeneous SoC systems.</li>
+          <li><strong>Memory and Interconnect Architecture:</strong> memory hierarchy, NoC/SoC fabrics, die-to-die/chiplet interconnects, and CXL/UCIe-style transaction semantics as mechanisms for scalable data movement.</li>
+          <li><strong>Performance Modeling and Architecture Exploration:</strong> event/cycle-level modeling, sensitivity analysis, effective bandwidth, average and tail latency, queue occupancy, credit stalls, and link utilization.</li>
+          <li><strong>Hardware-Aware System Design:</strong> link-controller datapaths, packetization, FIFO/CDC behavior, retry/replay mechanisms, and PHY-calibrated latency/bandwidth/reliability constraints.</li>
         </ul>
+      </section>
+
+      <section>
+        <h3>Current Focus</h3>
+        <p>
+          I am currently building a workload-driven methodology for understanding why practical memory and
+          interconnect systems often fall short of ideal latency-bandwidth models. My near-term work uses
+          D2D/chiplet links as a concrete setting to study how packetization, finite queues, credit-based flow
+          control, retry/replay, and link-controller datapaths affect effective bandwidth, tail latency, and
+          architecture design choices.
+        </p>
       </section>
 
       <section>
         <h2>News</h2>
         <ul>
-          <li><strong>[Aug. 2026]</strong> I joined the Microprocessor Research Center at ICT, CAS as a Ph.D. student advised by Prof. Jian Wang.</li>
+          <li><strong>[Aug. 2026]</strong> I joined the Microprocessor Research Center at ICT, CAS as a Ph.D. student advised by Prof. Jian Wang, and began exploring data-movement bottlenecks and memory-interconnect architecture for processor and heterogeneous SoC systems.</li>
           <li><strong>[Jul. 2026]</strong> Our manuscript on current differential protection for MMC-HVDC grids is under second-round review at IEEE TIE.</li>
           <li><strong>[Jun. 2026]</strong> I received the Outstanding Graduate Award from ShanghaiTech University.</li>
           <li><strong>[Jun. 2025]</strong> I completed a visiting study program at UC Berkeley with a GPA of 4.00/4.00.</li>
@@ -268,12 +289,10 @@
       </section>
 
       <footer>
-        Last updated: July 2026. Structure inspired by a minimal academic homepage style.
+        Last updated: August 2026. Structure inspired by a minimal academic homepage style.
       </footer>
     </main>
   </div>
 </body>
 </html>
-
-
 
