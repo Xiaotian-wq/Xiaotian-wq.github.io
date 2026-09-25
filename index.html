@@ -76,6 +76,8 @@
     .education .detail, .publication .detail { color: var(--subtle); font-size: 15px; }
     .awards li { padding: 5px 0 5px 18px; position: relative; }
     .awards li::before { content: "·"; position: absolute; left: 1px; color: var(--accent); font-weight: 700; }
+    .project p { margin-bottom: 6px; }
+    .project .status { color: var(--subtle); font-size: 15px; }
     .publication { padding: 6px 0 0; }
     .publication .title { font-weight: 600; }
     .publication p { margin-bottom: 5px; }
@@ -142,6 +144,15 @@
           <li><strong>Heterogeneous memory systems:</strong> memory fabrics and data movement.</li>
         </ul>
         <p>My background in analog circuits and high-speed wired communication informs how I think about link constraints and system-level performance.</p>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Research Projects</h2>
+        <div class="project">
+          <h3>Workload-driven D2D Link Modeling</h3>
+          <p class="status">In preparation</p>
+          <p>I plan to map representative traffic patterns onto a chiplet D2D link model and study how flow control, queueing, and retransmission affect throughput and tail latency. I will add reproducible experiments and results as the work develops.</p>
+        </div>
       </section>
 
       <section id="education" aria-labelledby="education-title">
