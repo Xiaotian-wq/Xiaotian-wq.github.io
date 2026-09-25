@@ -43,13 +43,13 @@
     .role { margin: 0 0 8px; color: var(--ink); font-size: 16px; }
     .affiliation { color: var(--subtle); font-size: 15px; line-height: 1.6; }
     .affiliation p { margin: 0 0 5px; }
-    .contact { display: flex; flex-direction: column; align-items: center; gap: 7px; margin-top: 23px; font-size: 15px; overflow-wrap: anywhere; }
+    .contact { display: flex; flex-direction: column; align-items: center; gap: 7px; margin-top: 23px; font-size: 15px; }
+    .contact a, .email-link { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+    .contact-icon { display: block; width: 16px; height: 16px; flex: none; }
     .contact a { text-decoration: none; }
     .contact a:hover { text-decoration: underline; }
     .email-link { padding: 0; border: 0; background: none; color: var(--accent); font: inherit; font-size: 14px; cursor: pointer; }
     .email-link:hover { text-decoration: underline; }
-    .orcid-link { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
-    .orcid-link img { display: block; width: 16px; height: 16px; }
     main { min-width: 0; }
     section { margin: 0 0 39px; }
     h2 { display: table; margin: 0 0 19px; padding-bottom: 9px; position: relative; color: var(--accent); font-size: 25px; line-height: 1.3; font-weight: 700; }
@@ -85,11 +85,13 @@
       .role { margin-bottom: 4px; }
       .affiliation { font-size: 15px; }
       .affiliation p { margin-bottom: 2px; }
-      .contact { grid-column: 1 / -1; flex-direction: row; justify-content: flex-start; gap: 4px 22px; margin-top: 16px; }
+      .contact { grid-column: 1 / -1; display: grid; grid-template-columns: max-content max-content; justify-content: start; gap: 7px 24px; margin-top: 16px; }
+      .email-link { grid-column: 1 / -1; }
     }
     @media (max-width: 520px) {
       .page { padding: 24px 20px 48px; }
       .profile { margin-bottom: 37px; }
+      .email-link { font-size: clamp(12px, 3.8vw, 14px); }
       .timeline li { display: block; }
       .timeline time { display: block; margin-bottom: 2px; }
       .education li { grid-template-columns: 53px minmax(0, 1fr); gap: 12px; }
@@ -115,9 +117,9 @@
         <p>156 Beiqing Road, Haidian District<br />Beijing, China</p>
       </div>
       <div class="contact">
-        <button class="email-link" type="button" data-local="zhangxiaotian26" data-domain="mails.ucas.ac.cn" aria-label="Email Xiaotian Zhang" title="Click to compose an email">zhangxiaotian26 [at] mails.ucas.ac.cn</button>
-        <a href="https://github.com/xiaotian-wq">GitHub ↗</a>
-        <a class="orcid-link" href="https://orcid.org/0009-0004-0276-7966" rel="me" aria-label="Xiaotian Zhang's ORCID profile"><img src="images/orcid_16x16.png" alt="ORCID iD icon" />ORCID ↗</a>
+        <button class="email-link" type="button" data-local="zhangxiaotian26" data-domain="mails.ucas.ac.cn" aria-label="Email Xiaotian Zhang" title="Click to compose an email"><svg class="contact-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5" /><path d="m2.2 4 5.8 4.5L13.8 4" /></svg><span>zhangxiaotian26 [at] mails.ucas.ac.cn</span></button>
+        <a href="https://github.com/xiaotian-wq"><svg class="contact-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.73c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg><span>GitHub ↗</span></a>
+        <a class="orcid-link" href="https://orcid.org/0009-0004-0276-7966" rel="me" aria-label="Xiaotian Zhang's ORCID profile"><img class="contact-icon" src="images/orcid_16x16.png" alt="" /><span>ORCID ↗</span></a>
       </div>
     </aside>
 
