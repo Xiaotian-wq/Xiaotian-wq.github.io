@@ -35,14 +35,17 @@
     a:focus-visible, .email-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
     .page { max-width: 1220px; margin: 0 auto; padding: 50px 34px 72px; display: grid; grid-template-columns: 275px minmax(0, 800px); justify-content: space-between; gap: 72px; }
     .profile { align-self: start; position: sticky; top: 40px; text-align: center; }
-    .portrait { width: 205px; height: 235px; margin: 0 auto 22px; background: #edf0f4; overflow: hidden; }
-    .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .portrait { width: 205px; height: 205px; margin: 0 auto 22px; background: #edf0f4; overflow: hidden; }
+    .portrait img { display: block; width: 100%; height: 100%; object-fit: contain; }
     .portrait-fallback { display: none; width: 100%; height: 100%; place-items: center; font: 600 46px/1 Georgia, serif; color: var(--accent); }
     h1, h2, h3, p { margin-top: 0; }
     h1 { margin-bottom: 13px; font-size: 29px; line-height: 1.25; font-weight: 700; }
     .role { margin: 0 0 8px; color: var(--ink); font-size: 16px; }
     .affiliation { color: var(--subtle); font-size: 15px; line-height: 1.6; }
     .affiliation p { margin: 0 0 5px; }
+    .address-line { display: flex; justify-content: center; align-items: flex-start; gap: 6px; }
+    .address-line svg { width: 15px; height: 15px; flex: none; margin-top: 4px; color: var(--accent); }
+    .address-line span { text-align: left; }
     .contact { display: flex; flex-direction: column; align-items: center; gap: 7px; margin-top: 23px; font-size: 15px; }
     .contact a, .email-link { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
     .contact-icon { display: block; width: 16px; height: 16px; flex: none; }
@@ -80,11 +83,12 @@
     @media (max-width: 820px) {
       .page { display: block; max-width: 720px; padding: 36px 25px 55px; }
       .profile { position: static; display: grid; grid-template-columns: 98px minmax(0, 1fr); gap: 0 18px; margin-bottom: 43px; text-align: left; }
-      .portrait { grid-row: span 3; width: 98px; height: 112px; margin: 0; }
+      .portrait { grid-row: span 3; width: 98px; height: 98px; margin: 0; }
       h1 { font-size: 26px; }
       .role { margin-bottom: 4px; }
       .affiliation { font-size: 15px; }
       .affiliation p { margin-bottom: 2px; }
+      .address-line { justify-content: flex-start; }
       .contact { grid-column: 1 / -1; display: grid; grid-template-columns: max-content max-content; justify-content: start; gap: 7px 24px; margin-top: 16px; }
       .email-link { grid-column: 1 / -1; }
     }
@@ -106,7 +110,7 @@
   <div class="page">
     <aside class="profile" aria-label="Profile and contact information">
       <div class="portrait">
-        <img src="images/photo.jpg?v=20260925" alt="Portrait of Xiaotian Zhang" onerror="this.hidden=true; this.nextElementSibling.style.display='grid'" />
+        <img src="images/photo.jpg?v=20260925-square" alt="Portrait of Xiaotian Zhang" onerror="this.hidden=true; this.nextElementSibling.style.display='grid'" />
         <span class="portrait-fallback" aria-hidden="true">XZ</span>
       </div>
       <h1>Xiaotian Zhang</h1>
@@ -114,7 +118,7 @@
       <div class="affiliation">
         <p>Institute of Computing Technology, CAS</p>
         <p><a href="https://sklp.ict.ac.cn/">State Key Lab of Processors</a></p>
-        <p>156 Beiqing Road, Haidian District<br />Beijing, China</p>
+        <p class="address-line"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 6.6c0 3.4-5 7.4-5 7.4S3 10 3 6.6a5 5 0 0 1 10 0Z" /><circle cx="8" cy="6.5" r="1.6" /></svg><span>156 Beiqing Road, Haidian District<br />Beijing, China</span></p>
       </div>
       <div class="contact">
         <button class="email-link" type="button" data-local="zhangxiaotian26" data-domain="mails.ucas.ac.cn" aria-label="Email Xiaotian Zhang" title="Click to compose an email"><svg class="contact-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5" /><path d="m2.2 4 5.8 4.5L13.8 4" /></svg><span>zhangxiaotian26 [at] mails.ucas.ac.cn</span></button>
