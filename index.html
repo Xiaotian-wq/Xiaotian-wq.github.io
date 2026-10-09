@@ -79,8 +79,14 @@
     .awards li { padding: 5px 0 5px 18px; position: relative; }
     .awards li::before { content: "·"; position: absolute; left: 1px; color: var(--accent); font-weight: 700; }
     .publication { padding: 6px 0 0; }
-    .publication .title { font-weight: 600; }
-    .publication p { margin-bottom: 5px; }
+    .publication .title { margin-bottom: 7px; font-size: 18px; line-height: 1.5; font-weight: 650; }
+    .publication .title a { text-decoration: none; }
+    .publication .title a:hover { text-decoration: underline; }
+    .publication .authors { margin-bottom: 5px; }
+    .publication .venue { margin-bottom: 8px; color: var(--subtle); }
+    .publication-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0; font-size: 15px; }
+    .publication-links a { font-weight: 600; text-decoration: none; }
+    .publication-links a:hover { text-decoration: underline; }
     footer { padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
     html[lang="zh-CN"] body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; }
     @media (max-width: 820px) {
@@ -182,9 +188,10 @@
       <section id="publications" aria-labelledby="publications-title">
         <h2 id="publications-title" data-i18n="publicationsTitle">Publications</h2>
         <div class="publication">
-          <p>Zhiquan Liu, <strong>Xiaotian Zhang</strong>, Qifeng Liao, Wentao Huang, and Yu Liu.</p>
           <p class="title"><a href="https://ieeexplore.ieee.org/document/11724385">Current Differential Protection for MMC-HVDC Grids Using a PDE-Based Compact Frequency-Dependent Line Model.</a></p>
-          <p><em>IEEE Transactions on Industrial Electronics</em><span data-i18n="publicationStatus">, Early Access, 2026, pp. 1–14. </span><a href="https://doi.org/10.1109/TIE.2026.3732437">doi: 10.1109/TIE.2026.3732437</a></p>
+          <p class="authors">Zhiquan Liu, <strong>Xiaotian Zhang</strong>, Qifeng Liao, Wentao Huang, and Yu Liu.</p>
+          <p class="venue"><em>IEEE Transactions on Industrial Electronics</em><span data-i18n="publicationStatus">, Early Access, 2026.</span></p>
+          <p class="publication-links"><a href="https://ieeexplore.ieee.org/document/11724385">IEEE Xplore ↗</a><a href="https://doi.org/10.1109/TIE.2026.3732437">DOI ↗</a></p>
         </div>
       </section>
 
@@ -221,7 +228,7 @@
         award3: 'ShanghaiTech 3+1 International Exchange Scholarship, highest tier (top 2%) · 2024',
         award4: 'Merit Student Award, ShanghaiTech University · 2022–2025',
         award5: 'Second Prize, Chinese Physics Olympiad, Shandong Division · 2021',
-        publicationsTitle: 'Publications', publicationStatus: ', Early Access, 2026, pp. 1–14. ', footer: 'Last updated: October 2026.'
+        publicationsTitle: 'Publications', publicationStatus: ', Early Access, 2026.', footer: 'Last updated: October 2026.'
       },
       zh: {
         profileLabel: '个人信息与联系方式', portraitAlt: '张孝天的个人照片', name: '张孝天',
@@ -251,7 +258,7 @@
         award3: '上海科技大学 3+1 国际交流奖学金最高等级（前2%）· 2024',
         award4: '上海科技大学优秀学生 · 2022–2025',
         award5: '全国中学生物理竞赛山东赛区二等奖 · 2021',
-        publicationsTitle: '论文发表', publicationStatus: '，Early Access，2026年，第1–14页。', footer: '最后更新：2026年10月。'
+        publicationsTitle: '论文发表', publicationStatus: '，Early Access，2026年。', footer: '最后更新：2026年10月。'
       }
     };
 
